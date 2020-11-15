@@ -12,5 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Photos\" />
   </ItemGroup>
 </Project>

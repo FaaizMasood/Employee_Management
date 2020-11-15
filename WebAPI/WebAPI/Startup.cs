@@ -64,8 +64,15 @@ namespace WebAPI
                 endpoints.MapControllers();
             });
 
+            // to acces the photos/any folder we need to write this code
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "Photos")),
+                RequestPath = "/Photos"
+            });
 
-      
+
         }
     }
 }

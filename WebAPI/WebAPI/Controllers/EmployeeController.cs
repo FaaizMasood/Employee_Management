@@ -166,7 +166,7 @@ namespace WebAPI.Controllers
                 var httpRequest = Request.Form;
                 var postedFile = httpRequest.Files[0];
                 string filename = postedFile.FileName;
-                var physicalPath = _env.ContentRootPath + "/Photos" + filename;
+                var physicalPath = _env.ContentRootPath + "/Photos/" + filename;
                 // Save the file 
                 using (var stream = new FileStream(physicalPath, FileMode.Create))
                 {
@@ -190,7 +190,7 @@ namespace WebAPI.Controllers
         public JsonResult GetAllDepartmentNames()
         {
             string query = @"
-                    select DepartmentName from dbo.Department
+                    select Department from dbo.Employee
                     ";
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("EmployeeAppCon");

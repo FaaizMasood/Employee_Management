@@ -1,0 +1,87 @@
+<div>
+  <!-- Button trigger modal -->
+  <button
+    type="button"
+    class="btn btn-primary float-right m-2"
+    data-toggle="modal"
+    data-target="#exampleModal"
+    (click)="addClick()"
+    data-backdrop="static"
+    data-keyboard="false"
+  >
+    Employee
+  </button>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{ ModalTitle }}</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            (click)="closeClick()"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <app-add-edit-emp [dep]="dep" *ngIf="ActivateAddEditEmpComp">
+          </app-add-edit-emp>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th>Department</th>
+        <th>DateOfJoining</th>
+        <th>Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of EmployeeList">
+        <td>{{ item.DepartmentId }}</td>
+        <td>{{ item.EmployeeName }}</td>
+        <td>{{ item.Department }}</td>
+        <td>{{ item.DateOfJoining }}</td>
+        <td>
+          <button
+            class="button"
+            class="btn btn-dark mr-1"
+            data-toggle="modal"
+            data-target="#exampleModal"
+            (click)="editClick(item)"
+            data-backdrop="static"
+            data-keyboard="false"
+          >
+            Update
+          </button>
+          <button
+            class="button"
+            class="btn btn-danger mr-1"
+            data-toggle="modal"
+            data-target="#exampleModal"
+            (click)="deleteClick(item)"
+            data-backdrop="static"
+            data-keyboard="false"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

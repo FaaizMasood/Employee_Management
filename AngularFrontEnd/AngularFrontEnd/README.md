@@ -21,6 +21,8 @@ On this webpage user can add employees by selecting the departments which have b
 4. Date of joining
 5. Options to Update and Delete
 
+While an employee is being added, a profile photo can also be uploaded for that particular employee.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

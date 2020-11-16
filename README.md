@@ -7,7 +7,7 @@ Technologies used in this project are:
 3. .Net Core API
 4. Angular 
 
-For more details on the Front-End of this application navigate to Employee_management/AngularFrontEnd/AngularFrontEnd/
+For more details on the Front-End of this application navigate to [Employee_management/AngularFrontEnd/AngularFrontEnd](Employee_Management/AngularFrontEnd/AngularFrontEnd/)
 
 
 For more details on the Back-End of this application navigate to Employee_management/WebAPI/
